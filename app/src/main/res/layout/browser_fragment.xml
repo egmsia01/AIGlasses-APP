@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aiglasses.widget.StatusLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hl_browser_hint"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context="com.aiglasses.ui.fragment.BrowserFragment">
+
+    <com.hjq.bar.TitleBar
+            android:layout_marginTop="@dimen/dp_25"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:leftIcon="@null"
+            app:title="导航"/>
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/sl_browser_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableHeaderTranslationContent="false"
+        app:srlEnableLoadMore="false"
+        app:srlEnablePreviewInEditMode="false"
+        app:srlPrimaryColor="#444444">
+
+        <com.aiglasses.widget.BrowserView
+            android:id="@+id/wv_browser_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_70"/>
+
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+</com.aiglasses.widget.StatusLayout>
