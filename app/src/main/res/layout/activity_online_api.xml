@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.aiglasses.tts.OnlineAPIActivity">
+
+    <EditText
+            android:layout_marginTop="@dimen/dp_50"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:background="@drawable/button_staly"
+            android:padding="12dp"
+            android:gravity="top"
+            android:textColor="#000"
+            android:id="@+id/et_text"
+            android:hint="请输入要合成的文本"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"/>
+    <Button
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginStart="@dimen/dp_50"
+            android:layout_marginEnd="@dimen/dp_50"
+            android:background="@drawable/button_staly"
+            android:id="@+id/btn_synth_api"
+            android:text="在线API合成"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:id="@+id/btn_play"
+            android:text="播放合成的音频"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginStart="@dimen/dp_50"
+            android:layout_marginEnd="@dimen/dp_50"
+            android:background="@drawable/button_staly"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+</LinearLayout>

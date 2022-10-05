@@ -1,12 +1,15 @@
 package com.aiglasses.ui.fragment;
 
 import android.graphics.Bitmap;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.webkit.WebView;
 
 import androidx.annotation.NonNull;
 
+import com.aiglasses.aop.SingleClick;
 import com.aiglasses.ui.activity.BrowserActivity;
 import com.aiglasses.R;
 import com.aiglasses.action.StatusAction;
@@ -20,15 +23,11 @@ import com.scwang.smart.refresh.layout.SmartRefreshLayout;
 import com.scwang.smart.refresh.layout.api.RefreshLayout;
 import com.scwang.smart.refresh.layout.listener.OnRefreshListener;
 
-/**
- *    author : Android 轮子哥
- *    github : https://github.com/getActivity/AndroidProject
- *    time   : 2020/10/24
- *    desc   : 浏览器 Fragment
- */
+
 public final class BrowserFragment extends AppFragment<AppActivity>
         implements StatusAction, OnRefreshListener {
 
+    private static MediaPlayer mMediaPlayer;
     private static final String INTENT_KEY_IN_URL = "url";
 
     @Log
@@ -52,6 +51,7 @@ public final class BrowserFragment extends AppFragment<AppActivity>
 
     @Override
     protected void initView() {
+        setOnClickListener(R.id.btn_home_gps);
         mStatusLayout = findViewById(R.id.hl_browser_hint);
         mRefreshLayout = findViewById(R.id.sl_browser_refresh);
         mBrowserView = findViewById(R.id.wv_browser_view);
@@ -92,6 +92,15 @@ public final class BrowserFragment extends AppFragment<AppActivity>
         reload();
     }
 
+    @SingleClick
+    @Override
+    public void onClick(View view) {
+        int viewId = view.getId();
+        if (viewId == R.id.btn_home_gps) {
+            mMediaPlayer = MediaPlayer.create(getActivity(), R.raw.gps_door);
+            mMediaPlayer.start();
+        }
+    }
     private class AppBrowserViewClient extends BrowserView.BrowserViewClient {
 
         /**

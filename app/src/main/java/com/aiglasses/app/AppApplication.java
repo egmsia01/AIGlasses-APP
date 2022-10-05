@@ -37,13 +37,13 @@ import com.tencent.mmkv.MMKV;
 
 import okhttp3.OkHttpClient;
 import timber.log.Timber;
-
 public final class AppApplication extends Application {
 
     @Log("启动耗时")
     @Override
     public void onCreate() {
         super.onCreate();
+
         initSdk(this);
     }
 
@@ -70,6 +70,8 @@ public final class AppApplication extends Application {
      * 初始化一些第三方框架
      */
     public static void initSdk(Application application) {
+        //   5ef048e1  为在开放平台注册的APPID  注意没有空格，直接替换即可
+        //SpeechUtility.createUtility(application,"appid=22977403");
         // 设置标题栏初始化器
         TitleBar.setDefaultStyle(new TitleBarStyle());
 

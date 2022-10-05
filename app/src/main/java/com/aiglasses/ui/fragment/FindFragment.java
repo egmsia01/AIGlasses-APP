@@ -15,12 +15,7 @@ import com.aiglasses.http.glide.GlideApp;
 import com.hjq.widget.view.CountdownView;
 import com.hjq.widget.view.SwitchButton;
 
-/**
- *    author : Android 轮子哥
- *    github : https://github.com/getActivity/AndroidProject
- *    time   : 2018/10/18
- *    desc   : 发现 Fragment
- */
+
 public final class FindFragment extends TitleBarFragment<HomeActivity>
         implements SwitchButton.OnCheckedChangeListener {
 

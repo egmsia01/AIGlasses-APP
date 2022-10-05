@@ -37,7 +37,11 @@ android {
             keyPassword KeyPassword
         }
     }
-
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
     // 构建配置：https://developer.android.google.cn/studio/build/build-variants
     buildTypes {
 
@@ -61,7 +65,7 @@ android {
             ])
             // 调试模式下只保留一种架构的 so 库，提升打包速度
             ndk {
-                abiFilters 'armeabi-v8a','x86'
+                abiFilters 'armeabi-v8a','x86','armeabi-v7a', 'arm64-v8a'
             }
         }
 
@@ -162,12 +166,14 @@ dependencies {
     implementation 'com.github.getActivity:ShapeView:6.0'
 
     // AOP 插件库：https://mvnrepository.com/artifact/org.aspectj/aspectjrt
-    implementation 'org.aspectj:aspectjrt:1.9.8'
+    implementation 'org.aspectj:aspectjrt:1.9.9.1'
 
     // 图片加载框架：https://github.com/bumptech/glide
     // 官方使用文档：https://github.com/Muyangmin/glide-docs-cn
     implementation 'com.github.bumptech.glide:glide:4.13.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.1'
 
     // 沉浸式框架：https://github.com/gyf-dev/ImmersionBar
@@ -182,7 +188,7 @@ dependencies {
 
     // 动画解析库：https://github.com/airbnb/lottie-android
     // 动画资源：https://lottiefiles.com、https://icons8.com/animated-icons
-    implementation 'com.airbnb.android:lottie:5.0.1'
+    implementation 'com.airbnb.android:lottie:5.0.3'
 
     // 上拉刷新下拉加载框架：https://github.com/scwang90/SmartRefreshLayout
     implementation 'com.scwang.smart:refresh-layout-kernel:2.0.3'
@@ -195,13 +201,20 @@ dependencies {
     implementation 'me.relex:circleindicator:2.1.6'
 
     // 腾讯 MMKV：https://github.com/Tencent/MMKV
-    implementation 'com.tencent:mmkv-static:1.2.12'
+    implementation 'com.tencent:mmkv-static:1.2.13'
 
     // 内存泄漏监测框架：https://github.com/square/leakcanary
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
-    previewImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
+    previewImplementation 'com.squareup.leakcanary:leakcanary-android:2.8.1'
 
     implementation("me.nikhilchaudhari:composeNeumorphism:1.0.0-alpha02")
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.3'
+    //权限请求框架
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.21'
     //按钮动画库 https://github.com/SparkYuan/SubmitButton
     //implementation 'com.github.rubensousa:raiflatbutton:0.1'
     //implementation 'mbanje.kurt:fabbutton:1.2.4@aar'

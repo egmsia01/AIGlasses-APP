@@ -36,7 +36,9 @@ public final class SplashActivity extends AppActivity {
     protected void initView() {
         mLottieView = findViewById(R.id.lav_splash_lottie);
         mDebugView = findViewById(R.id.iv_splash_debug);
+
         // 设置动画监听
+        mLottieView.setSpeed(15f);
         mLottieView.addAnimatorListener(new AnimatorListenerAdapter() {
 
             @Override
@@ -46,20 +48,25 @@ public final class SplashActivity extends AppActivity {
                 finish();
             }
         });
+
     }
 
     @Override
     protected void initData() {
         mDebugView.setText(AppConfig.getBuildType().toUpperCase());
+        /*
         if (AppConfig.isDebug()) {
             mDebugView.setVisibility(View.VISIBLE);
         } else {
             mDebugView.setVisibility(View.INVISIBLE);
         }
 
+         */
+        mDebugView.setVisibility(View.INVISIBLE);
         if (true) {
             return;
         }
+        /*
         // 刷新用户信息
         EasyHttp.post(this)
                 .api(new UserInfoApi())
@@ -70,6 +77,8 @@ public final class SplashActivity extends AppActivity {
 
                     }
                 });
+
+         */
     }
 
     @NonNull

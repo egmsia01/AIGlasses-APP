@@ -88,11 +88,6 @@
     </style>
 
     <!-- 默认垂直分割线样式 -->
-    <style name="VerticalLineStyle">
-        <item name="android:layout_width">@dimen/line_size</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:background">@color/common_line_color</item>
-    </style>
 
     <!-- 验证码按钮样式 -->
     <style name="CountdownViewStyle">

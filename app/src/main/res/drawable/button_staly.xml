@@ -6,7 +6,7 @@
         <!--色值-->
         <solid android:color="@color/darkgray" />
         <!--圆角-->
-        <corners android:radius="@dimen/dp_10" />
+        <corners android:radius="@dimen/dp_15" />
         <!-- padding：Button里面的文字与Button边界的间隔 -->
         <padding
                 android:bottom="10dp"
@@ -19,7 +19,7 @@
 <item>
     <shape>
         <solid android:color="#F0F0F0" />
-        <corners android:radius="@dimen/dp_10" />
+        <corners android:radius="@dimen/dp_15" />
         <!-- padding：Button里面的文字与Button边界的间隔 -->
         <padding
                 android:bottom="10dp"

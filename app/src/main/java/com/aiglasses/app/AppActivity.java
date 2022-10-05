@@ -3,11 +3,9 @@ package com.aiglasses.app;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
-
 import com.aiglasses.ui.dialog.WaitDialog;
 import com.gyf.immersionbar.ImmersionBar;
 import com.hjq.bar.TitleBar;

@@ -30,9 +30,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Objects;
 
-/**
- *    desc   : 可进行拷贝的副本
- */
 public final class MyFragment extends TitleBarFragment<HomeActivity> {
 
     private ViewGroup mAvatarLayout;

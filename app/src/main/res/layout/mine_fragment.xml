@@ -48,7 +48,6 @@
             tools:bar_rightText="智能眼镜"/>
 
     <com.hjq.widget.layout.SettingBar
-            android:id="@+id/sb_person_data_bindid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_10"
@@ -64,14 +63,12 @@
             app:bar_rightDrawable="@drawable/arrows_right_ic"
             app:bar_rightTextHint="@string/personal_data_address_hint" />
     <com.hjq.widget.layout.SettingBar
-            android:id="@+id/sb_person_data_setting"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_10"
             android:background="@color/white"
             app:bar_leftText="设置"/>
     <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_mine_bind"
             style="@style/ButtonStyle"
             android:layout_marginTop="@dimen/dp_20"
             android:layout_marginStart="@dimen/dp_120"

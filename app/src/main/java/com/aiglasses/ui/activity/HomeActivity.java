@@ -85,7 +85,6 @@ public final class HomeActivity extends AppActivity
         mPagerAdapter.addFragment(MyFragment.newInstance());
         mViewPager.setAdapter(mPagerAdapter);
         onNewIntent(getIntent());
-
     }
 
     @Override

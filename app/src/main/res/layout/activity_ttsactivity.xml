@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.aiglasses.ui.fragment.TTSActivity">
+
+
+    <TextView android:text="文字转语音示例"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/dp_100"
+              android:textSize="35sp"
+              android:layout_alignParentTop="true"
+              android:layout_centerHorizontal="true" tools:ignore="MissingConstraints"
+              tools:layout_editor_absoluteY="113dp" tools:layout_editor_absoluteX="89dp"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText"
+            android:layout_marginTop="@dimen/dp_20"
+            android:hint="输入文字"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="#ff7aff10"
+            android:textColorHint="#ffff23d1" tools:ignore="MissingConstraints" tools:layout_editor_absoluteY="225dp"
+            tools:layout_editor_absoluteX="162dp"/>
+    <Button
+            android:id="@+id/button"
+            android:layout_width="130dp"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText"
+            android:layout_centerHorizontal="true"
+            android:text="文字转语音" tools:ignore="MissingConstraints" tools:layout_editor_absoluteY="288dp"
+            tools:layout_editor_absoluteX="140dp"/>
+
+</LinearLayout>
